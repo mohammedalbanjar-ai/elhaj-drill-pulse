@@ -1,0 +1,28 @@
+Elhaj Drill Pulse v1.0.0 — بناء APK عبر GitHub بدون Android Studio
+
+المستودع: mohammedalbanjar-ai/elhaj-drill-pulse
+
+هذه الحزمة تكمل الملفات التي لم تظهر في مستودع GitHub عند الرفع الأول:
+  app/  : مصدر تطبيق Android، ومن ضمنه index.html من الإصدار v1
+  .github/workflows/build-android-apk.yml : وظيفة GitHub Actions لإنشاء APK
+
+1) فك ضغط Elhaj_Drill_Pulse_v1_Android_GitHub_Missing_Files.zip
+2) في GitHub افتح المستودع > Code > Add file > Upload files.
+3) اسحب المجلدين app و .github من مدير الملفات إلى منطقة الرفع (لا ترفع ZIP كما هو).
+   يُفضَّل استخدام Chrome لرفع المجلدات بالسحب. تحقّق في المعاينة من وجود المسارات
+      app/build.gradle
+      app/src/main/AndroidManifest.xml
+      app/src/main/java/com/elhaj/drillpulse/MainActivity.java
+      app/src/main/assets/index.html
+      .github/workflows/build-android-apk.yml
+4) اضغط Commit changes وانتظر انتهاء رفع الملفات.
+5) افتح Actions واختر Build Elhaj Drill Pulse APK > Run workflow > Run workflow.
+6) افتح نتيجة التشغيل عند انتهاء العمل (علامة خضراء)، ثم من Artifacts نزّل
+   Elhaj-Drill-Pulse-Android-APK.zip، فك الضغط وستجد app-debug.apk.
+
+مهم:
+- app-debug.apk إصدار تجريبي للتثبيت اليدوي، وليس نسخة Google Play موقعة بمفتاح إصدار.
+- لا يوجد APK مُنشأ ضمن هذه الحزمة. GitHub Actions هو الذي سيقوم بالبناء بعد الرفع.
+- شغّل البناء بعد تعديل index.html بتحديث app/src/main/assets/index.html أيضاً.
+- لم يتم إجراء اختبار تثبيت على هاتف فعلي.
+- لا ترفع ملفات بيانات الشركات أو مواقع الاستكشاف الحساسة إلى المستودع العام.
