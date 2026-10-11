@@ -1,0 +1,33 @@
+# Confidential project and assay files: never commit to public GitHub
+*.csv
+*.xls
+*.xlsx
+*.xlsm
+*.geojson
+*.kml
+*.kmz
+*.tif
+*.tiff
+*.gpkg
+*.sqlite
+*.db
+*.pem
+.env
+.env.*
+*.key
+*.token
+.DS_Store
+Thumbs.db
+__pycache__/
+node_modules/
+
+# Build output and transient files
+.gradle/
+build/
+app/build/
+*.apk
+*.aab
+*.log
+*.bak
+*.tmp
+*.zip
